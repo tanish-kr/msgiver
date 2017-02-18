@@ -1,0 +1,6 @@
+argh==0.26.2
+coverage==4.3.4
+pathtools==0.1.2
+pep8==1.7.0
+PyYAML==3.12
+watchdog==0.8.3

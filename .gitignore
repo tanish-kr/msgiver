@@ -2,7 +2,8 @@
 *.swp
 *.swo
 .python-version
-__pycach__/
+venv/
+__pycache__/
 
 # Unit test / coverage reports
 htmlcov/
