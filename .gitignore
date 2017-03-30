@@ -4,6 +4,7 @@
 .python-version
 venv/
 __pycache__/
+*.py[co]
 
 # Unit test / coverage reports
 htmlcov/
@@ -15,3 +16,4 @@ nosetests.xml
 coverage.xml
 *,cover
 .hypothesis/
+msgiver.egg-info/
