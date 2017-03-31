@@ -1,9 +1,15 @@
 # -*- coding: utf-8 -*-
 
 from abc import ABCMeta, abstractmethod
+import logging
 
 
 class MsgBase(metaclass=ABCMeta):
+
+    def __init__(self):
+        logging.basicConfig(level=logging.INFO,
+                        format='%(asctime)s - %(message)s',
+                        datefmt='%Y-%m-%d%H:%M:%S')
 
     @abstractmethod
     def post(self, message):
