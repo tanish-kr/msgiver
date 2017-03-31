@@ -21,3 +21,6 @@ clean:
 	find . -type f -regex ".*\.py[co]$$" -delete
 	find . -type d -name "__pycache__"  -delete
 	find . -type f \( -name "*.swp" \) -delete
+
+watch:
+	python bin/watcher.py
