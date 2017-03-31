@@ -29,9 +29,10 @@ def test(context):
         if not context.is_directory and re.compile(".py$").search(context.src_path):
             logging.info("Static code analysis with pep8 :%s", context.src_path)
             subprocess.call(["pep8", context.src_path])
-            logging.info("Unit test :%s", context.src_path)
-            test_file_name = "test_" + context.src_path.split("/")[-1]
+            prefix = "" if re.compile("^test_").search(context.src_path.split("/")[-1]) else "test_"
+            test_file_name = prefix + context.src_path.split("/")[-1]
             test_file_path = os.path.join(current_path(), "tests", test_file_name)
+            logging.info("Unit test :%s", test_file_path)
             if os.path.exists(test_file_path):
                 subprocess.call(["python", "-m", "unittest", test_file_path])
             else:
@@ -54,9 +55,12 @@ if __name__ == "__main__":
                         format='%(asctime)s - %(message)s',
                         datefmt='%Y-%m-%d%H:%M:%S')
     path = current_path() + "/msgiver"
+    test_path = current_path() + "/tests"
     event_handler = CIHandler(path)
+    test_event_handler = CIHandler(test_path)
     observer = Observer()
     observer.schedule(event_handler, path, recursive=True)
+    observer.schedule(test_event_handler, test_path, recursive=True)
     observer.start()
     try:
         while True:
