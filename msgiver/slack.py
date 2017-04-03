@@ -30,6 +30,7 @@ class Slack(MsgBase, SettingBase):
         self.__connect.request("POST", "/api/chat.postMessage", params, headers=headers)
         response = self.__connect.getresponse()
         data = json.loads(response.read())
+        self.__connect.close()
         return data
 
     def connect(self):
@@ -56,4 +57,7 @@ class Slack(MsgBase, SettingBase):
         return { "token": self.__token, "channel": self.__channel }
 
     def generate(self, args):
+        token = input("Please type for Slack api token. : ")
+        default_chanel = input("Please type for default channel. : ")
+
         pass
