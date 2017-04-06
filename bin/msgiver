@@ -1,0 +1,12 @@
+
+==> /usr/local/var/log/nginx/access.log <==
+127.0.0.1 - - [01/Mar/2017:23:57:34 +0900] "GET /htdocs/nkr-hp/public/ HTTP/1.1" 200 21931 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.88 Safari/537.36 Vivaldi/1.7.735.46"
+127.0.0.1 - - [01/Mar/2017:23:57:35 +0900] "GET /htdocs/nkr-hp/public/images/background.png HTTP/1.1" 304 0 "http://localhost/htdocs/nkr-hp/public/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.88 Safari/537.36 Vivaldi/1.7.735.46"
+127.0.0.1 - - [01/Mar/2017:23:58:40 +0900] "GET /htdocs/nkr-hp/public/ HTTP/1.1" 200 21911 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.88 Safari/537.36 Vivaldi/1.7.735.46"
+127.0.0.1 - - [01/Mar/2017:23:59:12 +0900] "GET /htdocs/nkr-hp/public/ HTTP/1.1" 200 21932 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.88 Safari/537.36 Vivaldi/1.7.735.46"
+127.0.0.1 - - [01/Mar/2017:23:59:13 +0900] "GET /htdocs/nkr-hp/public/images/icons/favicon.ico HTTP/1.1" 200 270398 "http://localhost/htdocs/nkr-hp/public/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.88 Safari/537.36 Vivaldi/1.7.735.46"
+127.0.0.1 - - [01/Mar/2017:23:59:13 +0900] "GET /htdocs/nkr-hp/public/images/icons/favicon.ico HTTP/1.1" 200 270398 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.88 Safari/537.36 Vivaldi/1.7.735.46"
+127.0.0.1 - - [08/Mar/2017:22:44:36 +0900] "GET / HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.88 Safari/537.36 Vivaldi/1.7.735.46"
+127.0.0.1 - - [08/Mar/2017:22:44:36 +0900] "GET /favicon.ico HTTP/1.1" 404 571 "http://127.0.0.1/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.88 Safari/537.36 Vivaldi/1.7.735.46"
+127.0.0.1 - - [06/Apr/2017:18:25:06 +0900] "GET / HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.138 Safari/537.36 Vivaldi/1.8.770.54"
+127.0.0.1 - - [06/Apr/2017:18:25:07 +0900] "GET /favicon.ico HTTP/1.1" 404 571 "http://localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.138 Safari/537.36 Vivaldi/1.8.770.54"
