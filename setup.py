@@ -50,7 +50,6 @@ setup(
         description="msgiver will deliver the text to Messenger",
         install_requires=install_requirements,
         tests_require=test_install_requirements,
-        package_dir={'': 'msgiver'},
-        packages=find_packages("msgiver"),
+        packages=find_packages(exclude=("tests", "tests.*")),
         package_data={},
 )

@@ -23,6 +23,10 @@ class Slack(MsgBase, SettingBase):
         __config = self.config()
         __config["text"] = message
         __config.update(self.__options)
+
+        if not __config["token"] or not __config["channel"]:
+            raise ValueError("Failed, Check your setting files.")
+
         params = urllib.parse.urlencode(__config)
         headers = { "Content-type": "application/x-www-form-urlencoded; charset=utf-8",
                 "Accept": "text/plain" }
@@ -38,18 +42,20 @@ class Slack(MsgBase, SettingBase):
             self.__connect = http_client.HTTPSConnection("slack.com")
             return self.__connect
         except Exception as e:
-            logging.error(e.message)
+            raise ConnectionError("Failed connection.")
 
 
     def config(self):
-        setting_file_path = os.path.join(os.environ.get("HOME"), ".msgiver")
+        setting_file_path = os.path.join(os.environ.get("HOME"), ".msgiver.yml")
         # file or env
         if os.path.exists(setting_file_path):
             with open(setting_file_path) as setting_file:
                 try:
-                    logging.info(setting_file)
+                    setting_data = yaml.load(setting_file)
+                    self.__token = setting_data["slack"]["token"]
+                    self.__channel = setting_data["slack"]["channel"]
                 except Exception as e:
-                    logging.error(e.message)
+                    raise IOError("Failed open setting file.")
         else:
             self.__token = os.environ.get(self.ENV_SLACK_TOKEN)
             self.__channel = os.environ.get(self.ENV_SLACK_CHANNEL)
