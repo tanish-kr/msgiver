@@ -31,6 +31,9 @@ with open("requirements.txt") as requiremens_file:
         print("Unable to read requirements from the requirements.txt file")
         sys.ext(2)
 
+with open("README.md") as readme_file:
+    readme = readme_file.read()
+
 with open("requirements/dev.txt") as test_requirements_file:
     try:
         test_install_requirements = test_requirements_file.read().splitlines()
@@ -48,6 +51,7 @@ setup(
         author="Tatsunori Nishikori",
         author_email="tora.1986.tatsu@gmail.com",
         description="msgiver will deliver the text to Messenger",
+        long_description=readme,
         install_requires=install_requirements,
         tests_require=test_install_requirements,
         packages=find_packages(exclude=("tests", "tests.*")),
