@@ -44,7 +44,7 @@ with open("requirements/dev.txt") as test_requirements_file:
 
 setup(
         name="msgiver",
-        version="0.0.1",
+        version="0.1.0",
         url="https://github.com/kitaro-tn/msgiver",
         license="MIT",
         test_suite="msgiver",
@@ -55,5 +55,13 @@ setup(
         install_requires=install_requirements,
         tests_require=test_install_requirements,
         packages=find_packages(exclude=("tests", "tests.*")),
-        package_data={},
+        classifiers=[
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+        'License :: OSI Approved :: MIT License',
+        ],
+        # package_data={},
 )
