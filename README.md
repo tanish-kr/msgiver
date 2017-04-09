@@ -74,7 +74,33 @@ optional arguments:
 
 ## Development
 
-TODO: 
+```
+$ make develop
+```
+
+### Test
+
+```
+$ make test
+```
+
+or
+
+```
+$ python -m unittest tests
+```
+
+### PEP8
+
+```
+$ pep8 msgiver
+```
+
+### Watcher
+
+```
+$ make watcher
+```
 
 ## Issues
 
