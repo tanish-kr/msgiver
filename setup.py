@@ -44,7 +44,7 @@ with open("requirements/dev.txt") as test_requirements_file:
 
 setup(
         name="msgiver",
-        version="0.0.1",
+        version="0.1.0",
         url="https://github.com/kitaro-tn/msgiver",
         license="MIT",
         test_suite="msgiver",
