@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 
-from abc import ABCMeta, abstractmethod
+import six
 import logging
+from abc import ABCMeta, abstractmethod
 
 
-class MsgBase(metaclass=ABCMeta):
+@six.add_metaclass(ABCMeta)
+class MsgBase(object):
 
     def __init__(self):
         logging.basicConfig(level=logging.INFO,

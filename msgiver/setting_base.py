@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 
+import six
 from abc import ABCMeta, abstractmethod
 
 
-class SettingBase(metaclass=ABCMeta):
+@six.add_metaclass(ABCMeta)
+class SettingBase(object):
 
     @abstractmethod
     def generate(self, args):
