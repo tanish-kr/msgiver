@@ -3,8 +3,8 @@
 import os
 import json
 import yaml
-import urllib.parse
 from six.moves import http_client
+from six.moves.urllib import parse
 from msgiver.msg_base import MsgBase
 from msgiver.setting_base import SettingBase
 
@@ -27,7 +27,7 @@ class Slack(MsgBase, SettingBase):
         if not __config["token"] or not __config["channel"]:
             raise ValueError("Failed, Check your setting files.")
 
-        params = urllib.parse.urlencode(__config)
+        params = parse.urlencode(__config)
         headers = { "Content-type": "application/x-www-form-urlencoded; charset=utf-8",
                 "Accept": "text/plain" }
 
