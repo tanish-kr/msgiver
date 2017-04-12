@@ -31,7 +31,7 @@ with open("requirements.txt") as requiremens_file:
         print("Unable to read requirements from the requirements.txt file")
         sys.ext(2)
 
-with open("README.md") as readme_file:
+with open("README.rst") as readme_file:
     readme = readme_file.read()
 
 # with open("requirements/dev.txt") as test_requirements_file:
@@ -46,7 +46,7 @@ setup(
         name="msgiver",
         version="0.1.1",
         url="https://github.com/kitaro-tn/msgiver",
-        scripts=["bin/msgiver"]
+        scripts=["bin/msgiver"],
         license="MIT",
         test_suite="msgiver",
         author="Tatsunori Nishikori",

@@ -16,6 +16,15 @@ PYTHON_VERSION = $(python --version)
 test:
 	python -m unittest tests
 
+build-pkg: clean
+	@echo "Build to setup.py"
+	python setup.py sdist
+	twine register dist/*
+
+upload-pkg:
+	@echo "Upload package to PyPI"
+	twine upload dist/*
+
 install:
 	@echo "Install msgiver"
 	python setup.py install
@@ -34,6 +43,7 @@ update:
 clean:
 	@echo "Clean this project"
 	rm -rf msgiver/msgiver.egg-info/
+	rm -rf dist/*
 	find . -type f -regex ".*\.py[co]$$" -delete
 	find . -type d -name "__pycache__"  -delete
 	find . -type f \( -name "*.swp" \) -delete
