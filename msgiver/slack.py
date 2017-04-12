@@ -33,9 +33,15 @@ class Slack(MsgBase, SettingBase):
 
         self.__connect.request("POST", "/api/chat.postMessage", params, headers=headers)
         response = self.__connect.getresponse()
-        data = json.loads(response.read())
-        self.__connect.close()
-        return data
+        raw_data = response.read().decode("UTF-8")
+
+        if raw_data:
+            data = json.loads(raw_data)
+            self.__connect.close()
+            return data
+        else:
+            return None
+
 
     def connect(self):
         try:
