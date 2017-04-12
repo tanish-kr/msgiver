@@ -34,18 +34,19 @@ with open("requirements.txt") as requiremens_file:
 with open("README.md") as readme_file:
     readme = readme_file.read()
 
-with open("requirements/dev.txt") as test_requirements_file:
-    try:
-        test_install_requirements = test_requirements_file.read().splitlines()
-    except Exception as e:
-        print(e.message)
-        print("Unable to read requirements from the requirements/dev.txt file")
-        sys.ext(3)
+# with open("requirements/dev.txt") as test_requirements_file:
+#     try:
+#         test_install_requirements = test_requirements_file.read().splitlines()
+#     except Exception as e:
+#         print(e.message)
+#         print("Unable to read requirements from the requirements/dev.txt file")
+#         sys.ext(3)
 
 setup(
         name="msgiver",
-        version="0.1.0",
+        version="0.1.1",
         url="https://github.com/kitaro-tn/msgiver",
+        scripts=["bin/msgiver"]
         license="MIT",
         test_suite="msgiver",
         author="Tatsunori Nishikori",
@@ -53,7 +54,7 @@ setup(
         description="msgiver will deliver the text to Messenger",
         long_description=readme,
         install_requires=install_requirements,
-        tests_require=test_install_requirements,
+        # tests_require=test_install_requirements,
         packages=find_packages(exclude=("tests", "tests.*")),
         classifiers=[
         'Programming Language :: Python :: 2',
