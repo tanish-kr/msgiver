@@ -3,4 +3,6 @@ coverage==4.3.4
 pathtools==0.1.2
 pep8==1.7.0
 PyYAML==3.12
+six==1.10.0
+twine=1.8.1
 watchdog==0.8.3
