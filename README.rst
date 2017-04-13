@@ -16,9 +16,8 @@ Install
 
 ::
 
-    $ git clone https://github.com/kitaro-tn/msgiver.git
-    $ cd msgiver
-    $ make install
+    $ pip install msgiver
+    $ msgiver setting
 
 Useage
 ------
