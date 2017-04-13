@@ -25,11 +25,11 @@ upload-pkg:
 	@echo "Upload package to PyPI"
 	twine upload dist/*
 
-install:
+install: clean
 	@echo "Install msgiver"
 	python setup.py install
-	ln -svf ./bin/msgiver /usr/local/bin
-	/usr/local/bin/msgiver setting
+	# ln -svf $(PWD)/bin/msgiver /usr/local/bin
+	# /usr/local/bin/msgiver setting
 	@echo "Complete installed msgiver"
 
 update:
