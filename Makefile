@@ -28,8 +28,6 @@ upload-pkg:
 install: clean
 	@echo "Install msgiver"
 	python setup.py install
-	# ln -svf $(PWD)/bin/msgiver /usr/local/bin
-	# /usr/local/bin/msgiver setting
 	@echo "Complete installed msgiver"
 
 update:
@@ -42,8 +40,9 @@ update:
 
 clean:
 	@echo "Clean this project"
-	rm -rf msgiver/msgiver.egg-info/
+	rm -rf msgiver.egg-info/
 	rm -rf dist/*
+	rm -rf build/*
 	find . -type f -regex ".*\.py[co]$$" -delete
 	find . -type d -name "__pycache__"  -delete
 	find . -type f \( -name "*.swp" \) -delete
