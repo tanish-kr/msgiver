@@ -2,6 +2,7 @@
 
 import os
 import yaml
+from six.moves import input
 
 
 class Configure:
@@ -35,9 +36,9 @@ class Configure:
         return config_data
 
     def __input_slack(self):
-        slack_conf = slack()
+        slack_conf = self.slack()
         while True:
-            token = raw_input("Please type for Slack api token. [required] : %s" % slack_conf["token"])
+            token = input("Please type for Slack api token. [required] : %s" % slack_conf["token"])
             if not token:
                 if slack_conf["token"]:
                     token = slack_conf["token"]
@@ -47,11 +48,11 @@ class Configure:
             else:
                 break
 
-        default_chanel = raw_input("Please type for default channel. [not required] : %s" % slack_conf["channel"])
+        default_chanel = input("Please type for default channel. [not required] : %s" % slack_conf["channel"])
         if not default_chanel and slack_conf["channel"]:
             default_chanel = slack_conf["channel"]
 
-        bot_icon = raw_input("Please type for image url. [not required] : %s" % slack_conf["bot_icon"])
+        bot_icon = input("Please type for image url. [not required] : %s" % slack_conf["bot_icon"])
         if not bot_icon and slack_conf["bot_icon"]:
             bot_icon = slack_conf["bot_icon"]
 
