@@ -15,7 +15,7 @@ class Slack(MsgBase, SettingBase):
     ENV_SLACK_CHANNEL = "MSGIVER_SLACK_DEFAULT_CHANNEL"
 
     def __init__(self, options=None):
-        super().__init__
+        super(Slack, self).__init__()
         self.__options = options
 
     def post(self, message):
