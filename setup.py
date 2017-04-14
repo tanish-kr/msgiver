@@ -44,7 +44,7 @@ with open("README.rst") as readme_file:
 
 setup(
         name="msgiver",
-        version="0.1.7",
+        version="0.1.7.1",
         url="https://github.com/kitaro-tn/msgiver",
         scripts=["bin/msgiver"],
         license="MIT",
