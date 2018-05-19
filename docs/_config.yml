@@ -1,0 +1,5 @@
+plugins:
+  - jekyll-redirect-from
+
+redirect_from:
+  - /_build/html/
