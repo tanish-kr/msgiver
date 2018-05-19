@@ -1,2 +1,6 @@
 gems:
   - jekyll-redirect-from
+
+keep_files:
+  - build/html/_static
+  - build/html/_sources
