@@ -1,6 +1,4 @@
 gems:
   - jekyll-redirect-from
 
-include:
-  - build/html/_static
-  - build/html/_sources
+include: ['build/html/_static', 'build/html/_sources']
