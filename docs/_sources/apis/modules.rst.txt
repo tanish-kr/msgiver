@@ -7,3 +7,6 @@ msgiver
    :maxdepth: 2
 
    msgiver
+
+.. autosummary::
+    :toctree: _autosummary:

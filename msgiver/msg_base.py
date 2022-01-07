@@ -17,8 +17,12 @@ class MsgBase(object):
     def post(self, message):
         """
             Post a message
-            :param str message: Post message
-            :raises InternalServerError:
+
+            Args:
+                message (str): Post message
+
+            Raises:
+                InternalServerError:
         """
         pass
 
@@ -26,8 +30,12 @@ class MsgBase(object):
     def connect(self, options):
         """
             Connection to API
-            :param dict options: Connection parameters
-            :raises ConnectError:
+
+            Args:
+                options (dict): Connection parameters
+
+            Raises:
+                ConnectError:
         """
         pass
 
@@ -35,6 +43,8 @@ class MsgBase(object):
     def config(self):
         """
             Config for API
-            :return dict: Config data
+
+            Returns
+                dict: Config data
         """
         pass

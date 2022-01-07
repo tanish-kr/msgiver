@@ -1,9 +1,7 @@
-:orphan:
-
 msgiver
 =======
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
    msgiver

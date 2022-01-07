@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>msgiver package &#8212; msgiver 0.1.7.1 documentation</title>
+    <title>msgiver.msg_base module &#8212; msgiver 0.1.7.1 documentation</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" src="../_static/documentation_options.js"></script>
@@ -29,23 +29,37 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="msgiver-package">
-<h1>msgiver package<a class="headerlink" href="#msgiver-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="msgiver.configure.html">msgiver.configure module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="msgiver.gist.html">msgiver.gist module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="msgiver.msg_base.html">msgiver.msg_base module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="msgiver.setting_base.html">msgiver.setting_base module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="msgiver.slack.html">msgiver.slack module</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="module-msgiver">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-msgiver" title="Permalink to this headline">¶</a></h2>
-</div>
+  <div class="section" id="module-msgiver.msg_base">
+<span id="msgiver-msg-base-module"></span><h1>msgiver.msg_base module<a class="headerlink" href="#module-msgiver.msg_base" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="msgiver.msg_base.MsgBase">
+<em class="property">class </em><code class="descclassname">msgiver.msg_base.</code><code class="descname">MsgBase</code><a class="headerlink" href="#msgiver.msg_base.MsgBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="msgiver.msg_base.MsgBase.config">
+<code class="descname">config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#msgiver.msg_base.MsgBase.config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Config for API
+:return dict: Config data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="msgiver.msg_base.MsgBase.connect">
+<code class="descname">connect</code><span class="sig-paren">(</span><em>options</em><span class="sig-paren">)</span><a class="headerlink" href="#msgiver.msg_base.MsgBase.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connection to API
+:param dict options: Connection parameters
+:raises ConnectError:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="msgiver.msg_base.MsgBase.post">
+<code class="descname">post</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#msgiver.msg_base.MsgBase.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post a message
+:param str message: Post message
+:raises InternalServerError:</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 
@@ -53,16 +67,7 @@
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">msgiver package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-msgiver">Module contents</a></li>
-</ul>
-</li>
-</ul>
-<div class="relations">
+        <div class="sphinxsidebarwrapper"><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
@@ -72,7 +77,7 @@
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/apis/msgiver.rst.txt"
+      <li><a href="../_sources/apis/msgiver.msg_base.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -100,7 +105,7 @@
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
-      <a href="../_sources/apis/msgiver.rst.txt"
+      <a href="../_sources/apis/msgiver.msg_base.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
